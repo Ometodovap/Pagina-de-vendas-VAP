@@ -1,0 +1,84 @@
+[
+  {
+    "id": 1,
+    "title": "Fundamentos da Neurovenda",
+    "description": "Decodifique a mente do cliente. Aprenda como o cérebro toma decisões de compra e como influenciar esse processo.",
+    "duration": "4h 30min",
+    "lessons": 12,
+    "points": 100,
+    "content": {
+      "introduction": "A neurovenda é a aplicação dos conhecimentos da neurociência no processo de vendas...",
+      "topics": [
+        "Os três cérebros da decisão",
+        "Gatilhos mentais fundamentais",
+        "Psicologia do consumidor",
+        "Técnicas de persuasão ética"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "title": "Copywriting que Converte",
+    "description": "Palavras que vendem. Domine a arte da escrita persuasiva que transforma visitantes em compradores.",
+    "duration": "5h 15min",
+    "lessons": 15,
+    "points": 150,
+    "content": {
+      "introduction": "Copywriting é a habilidade de escrever textos persuasivos que levam o leitor a tomar uma ação específica...",
+      "topics": [
+        "Fórmula AIDA turbinada",
+        "Gatilhos de copywriting",
+        "Headlines que convertem",
+        "CTAs irresistíveis"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "title": "Prospecção Inteligente",
+    "description": "Encontre clientes qualificados usando estratégias modernas e automação inteligente.",
+    "duration": "3h 45min",
+    "lessons": 10,
+    "points": 100
+  },
+  {
+    "id": 4,
+    "title": "Liderança em Vendas",
+    "description": "Desenvolva presença e autoridade para liderar equipes de alta performance e multiplicar resultados.",
+    "duration": "6h 20min",
+    "lessons": 18,
+    "points": 200
+  },
+  {
+    "id": 5,
+    "title": "Gatilhos Mentais Avançados",
+    "description": "Psicologia aplicada às vendas. Acelere decisões de compra usando gatilhos poderosos.",
+    "duration": "4h 10min",
+    "lessons": 13,
+    "points": 150
+  },
+  {
+    "id": 6,
+    "title": "IA nas Vendas",
+    "description": "Use inteligência artificial para otimizar processos, automatizar follow-ups e aumentar resultados.",
+    "duration": "5h 30min",
+    "lessons": 16,
+    "points": 200
+  },
+  {
+    "id": 7,
+    "title": "Negociação Estratégica",
+    "description": "Técnicas avançadas para fechar negócios com margem superior e vencer objeções.",
+    "duration": "4h 45min",
+    "lessons": 14,
+    "points": 150
+  },
+  {
+    "id": 8,
+    "title": "Autoridade e Posicionamento",
+    "description": "Posicione-se como especialista e referência no seu mercado. Clientes vêm até você.",
+    "duration": "3h 20min",
+    "lessons": 9,
+    "points": 100
+  }
+]

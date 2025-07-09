@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 1: Fundamentos da Neurovenda - MÉTODO VAP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0AFF0F',
+                        dark: '#272525'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white min-h-screen">
+    <!-- Header -->
+    <header class="bg-gray-900 border-b border-gray-700 sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                        </svg>
+                    </a>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 bg-gradient-to-r from-primary to-green-500 rounded-lg flex items-center justify-center">
+                            <span class="text-black font-black text-sm">01</span>
+                        </div>
+                        <span class="text-lg font-bold text-white font-poppins">Fundamentos da Neurovenda</span>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <div class="text-right">
+                        <div class="text-white font-bold" id="studentNameDisplay">Carregando...</div>
+                        <div class="text-gray-400 text-sm">Módulo 1 de 8</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="bg-gray-800 h-2">
+        <div class="bg-gradient-to-r from-primary to-green-500 h-2 transition-all duration-500" id="readingProgress" style="width: 0%"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Module Header -->
+        <div class="text-center mb-12">
+            <div class="inline-flex items-center bg-primary/20 text-primary px-6 py-3 rounded-full text-sm font-bold mb-6 border border-primary/30">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                MÓDULO 01 - FUNDAMENTOS
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-black text-white mb-6 font-poppins">
+                Fundamentos da <span class="text-primary">Neurovenda</span>
+            </h1>
+            
+            <p class="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8 font-inter">
+                Decodifique a mente do cliente. Aprenda como o cérebro toma decisões de compra e como influenciar esse processo de forma ética e eficaz.
+            </p>
+
+            <div class="flex items-center justify-center space-x-6 text-sm text-gray-400">
+                <span class="flex items-center">
+                    <svg class="w-4 h-4 mr-1 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                    </svg>
+                    4h 30min de conteúdo
+                </span>
+                <span class="flex items-center">
+                    <svg class="w-4 h-4 mr-1 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"></path>
+                    </svg>
+                    12 aulas práticas
+                </span>
+                <span class="flex items-center">
+                    <svg class="w-4 h-4 mr-1 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    100 pontos
+                </span>
+            </div>
+        </div>
+
+        <!-- Module Content -->
+        <article class="prose prose-lg prose-invert max-w-none" id="moduleContent">
+            <div class="bg-gray-900 rounded-2xl p-8 border border-gray-700 mb-8">
+                <h2 class="text-2xl font-bold text-primary mb-4 font-poppins">🧠 Introdução à Neurovenda</h2>
+                <p class="text-gray-300 leading-relaxed font-inter">
+                    A neurovenda é a aplicação dos conhecimentos da neurociência no processo de vendas. Ela nos permite entender como o cérebro humano processa informações, toma decisões e responde a estímulos durante o processo de compra.
+                </p>
+                <p class="text-gray-300 leading-relaxed font-inter">
+                    Diferente das técnicas tradicionais de vendas que focam apenas em argumentos lógicos, a neurovenda reconhece que <strong class="text-primary">95% das decisões de compra são tomadas pelo subconsciente</strong>, baseadas em emoções e impulsos automáticos.
+                </p>
+            </div>
+
+            <div class="bg-gray-900 rounded-2xl p-8 border border-gray-700 mb-8">
+                <h2 class="text-2xl font-bold text-primary mb-4 font-poppins">🎯 Os Três Cérebros da Decisão</h2>
+                <p class="text-gray-300 leading-relaxed font-inter mb-6">
+                    Para dominar a neurovenda, você precisa entender como funcionam os três níveis do cérebro humano:
+                </p>
+
+                <div class="space-y-6">
+                    <div class="bg-black/50 rounded-xl p-6 border border-primary/30">
+                        <h3 class="text-xl font-bold text-primary mb-3 font-poppins">1. Cérebro Reptiliano (Sobrevivência)</h3>
+                        <p class="text-gray-300 font-inter">
+                            Responsável pelas decisões instintivas e de sobrevivência. É aqui que nascem o medo, a urgência e a necessidade de segurança. 
+                            <strong class="text-white">Este cérebro decide em milissegundos se algo é uma ameaça ou oportunidade.</strong>
+                        </p>
+                        <div class="mt-4 p-4 bg-primary/10 rounded-lg">
+                            <strong class="text-primary">Aplicação prática:</strong> Use gatilhos de escassez, urgência e segurança para ativar este cérebro.
+                        </div>
+                    </div>
+
+                    <div class="bg-black/50 rounded-xl p-6 border border-yellow-500/30">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-3 font-poppins">2. Cérebro Límbico (Emoções)</h3>
+                        <p class="text-gray-300 font-inter">
+                            Centro das emoções, memórias e relacionamentos. É responsável por criar conexões emocionais e determinar o que é importante para nós.
+                            <strong class="text-white">Aqui nascem o desejo, a paixão e a identificação com marcas.</strong>
+                        </p>
+                        <div class="mt-4 p-4 bg-yellow-500/10 rounded-lg">
+                            <strong class="text-yellow-500">Aplicação prática:</strong> Conte histórias, use depoimentos e crie conexões emocionais.
+                        </div>
+                    </div>
+
+                    <div class="bg-black/50 rounded-xl p-6 border border-blue-500/30">
+                        <h3 class="text-xl font-bold text-blue-500 mb-3 font-poppins">3. Neocórtex (Lógica)</h3>
+                        <p class="text-gray-300 font-inter">
+                            Responsável pelo pensamento racional, análise e justificativas. Embora seja o último a decidir, 
+                            <strong class="text-white">ele é fundamental para justificar decisões já tomadas pelos outros cérebros.</strong>
+                        </p>
+                        <div class="mt-4 p-4 bg-blue-500/10 rounded-lg">
+                            <strong class="text-blue-500">Aplicação prática:</strong> Forneça dados, comparações e argumentos lógicos para justificar a compra.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gray-900 rounded-2xl p-8 border border-gray-700 mb-8">
+                <h2 class="text-2xl font-bold text-primary mb-4 font-poppins">⚡ Os 7 Gatilhos Fundamentais da Neurovenda</h2>
+                <p class="text-gray-300 leading-relaxed font-inter mb-6">
+                    Existem gatilhos mentais específicos que ativam respostas automáticas no cérebro do cliente. Dominar estes gatilhos é essencial para qualquer vendedor de sucesso:
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-black/50 rounded-xl p-6 border border-gray-600">
+                        <h4 class="text-lg font-bold text-primary mb-2 font-poppins">1. Reciprocidade</h4>
+                        <p class="text-gray-300 text-sm font-inter">Quando oferecemos algo de valor primeiro, o cliente sente-se obrigado a retribuir.</p>
+                    </div>
+
+                    <div class="bg-black/50 rounded-xl p-6 border border-gray-600">
+                        <h4 class="text-lg font-bold text-primary mb-2 font-poppins">2. Escassez</h4>
+                        <p class="text-gray-300 text-sm font-inter">Produtos limitados ou ofertas por tempo determinado ativam o medo de perder.</p>
+                    </div>
+
+                    <div class="bg-black/50 rounded-xl p-6 border border-gray-600">
+                        <h4 class="text-lg font-bold text-primary mb-2 font-poppins">3. Autoridade</h4>
+                        <p class="text-gray-300 text-sm font-inter">Pessoas tendem a seguir especialistas e figuras de autoridade reconhecida.</p>
+                    </div>
+
+                    <div class="bg-black/50 rounded-xl p-6 border border-gray-600">
+                        <h4 class="text-lg font-bold text-primary mb-2 font-poppins">4. Prova Social</h4>
+                        <p class="text-gray-300 text-sm font-inter">Depoimentos e casos de sucesso mostram que outros já fizeram a mesma escolha.</p>
+                    </div>
+
+                    <div class="bg-black/50 rounded-xl p-6 border border-gray-600">
+                        <h4 class="text-lg font-bold text-primary mb-2 font-poppins">5. Compromisso</h4>
+                        <p class="text-gray-300 text-sm font-inter">Quando o cliente se compromete publicamente, ele tende a manter a decisão.</p>
+                    </div>
+
+                    <div class="bg-black/50 rounded-xl p-6 border border-gray-600">
+                        <h4 class="text-lg font-bold text-primary mb-2 font-poppins">6. Afinidade</h4>
+                        <p class="text-gray-300 text-sm font-inter">Compramos de pessoas que gostamos e que são similares a nós.</p>
+                    </div>
+
+                    <div class="bg-black/50 rounded-xl p-6 border border-gray-600">
+                        <h4 class="text-lg font-bold text-primary mb-2 font-poppins">7. Contraste</h4>
+                        <p class="text-gray-300 text-sm font-inter">Apresentar opções em sequência específica influencia a percepção de valor.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-primary/10 to-green-500/10 rounded-2xl p-8 border border-primary/30 mb-8">
+                <h2 class="text-2xl font-bold text-primary mb-4 font-poppins">🎯 Exercício Prático</h2>
+                <p class="text-gray-300 leading-relaxed font-inter mb-4">
+                    <strong>Desafio:</strong> Identifique uma situação de venda recente onde você poderia ter aplicado os gatilhos de neurovenda. 
+                    Reescreva sua abordagem usando pelo menos 3 dos gatilhos apresentados.
+                </p>
+                <div class="bg-black/50 rounded-xl p-6">
+                    <h4 class="text-white font-bold mb-2">Exemplo de aplicação:</h4>
+                    <p class="text-gray-300 text-sm font-inter">
+                        <strong>Antes:</strong> "Nosso produto é muito bom e tem ótimo preço."<br>
+                        <strong>Depois:</strong> "Mais de 500 empresas como a sua (prova social) já aumentaram suas vendas em 40% usando nossa solução (autoridade). 
+                        Temos apenas 3 vagas restantes neste mês (escassez) e posso garantir um desconto especial se decidir hoje (reciprocidade)."
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gray-900 rounded-2xl p-8 border border-gray-700 mb-8">
+                <h2 class="text-2xl font-bold text-primary mb-4 font-poppins">📝 Resumo do Módulo</h2>
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <p class="text-gray-300 font-inter">95% das decisões de compra são tomadas pelo subconsciente</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <p class="text-gray-300 font-inter">Os três cérebros (reptiliano, límbico e neocórtex) processam informações de forma diferente</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <p class="text-gray-300 font-inter">Os 7 gatilhos fundamentais podem ser aplicados em qualquer processo de venda</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <p class="text-gray-300 font-inter">A prática e aplicação consistente dos conceitos gera resultados mensuráveis</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Module Completion -->
+        <div class="text-center mt-12">
+            <div class="bg-gray-900 rounded-2xl p-8 border border-gray-700">
+                <h3 class="text-2xl font-bold text-white mb-4 font-poppins">🎉 Parabéns!</h3>
+                <p class="text-gray-300 mb-6 font-inter">
+                    Você concluiu o Módulo 1: Fundamentos da Neurovenda. 
+                    Agora você entende como o cérebro humano toma decisões de compra!
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <button onclick="completeModule()" id="completeBtn" class="bg-gradient-to-r from-primary to-green-500 hover:from-green-500 hover:to-primary text-black font-black py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
+                        ✅ Marcar como Concluído (+100 pontos)
+                    </button>
+                    
+                    <button onclick="downloadPDF()" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 px-8 rounded-xl transition-colors">
+                        📄 Baixar PDF do Módulo
+                    </button>
+                </div>
+
+                <div class="mt-6 pt-6 border-t border-gray-700">
+                    <p class="text-gray-400 text-sm font-inter">
+                        Próximo: <a href="modulo-2.html" class="text-primary hover:underline">Módulo 2 - Copywriting que Converte</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let studentData = JSON.parse(localStorage.getItem('studentData')) || {
+            name: 'Visitante',
+            email: '',
+            enrollmentDate: new Date().toISOString(),
+            completedModules: [],
+            points: 0,
+            achievements: []
+        };
+
+        function initializeModule() {
+            if (!studentData.name || studentData.name === 'Visitante') {
+                window.location.href = '../';
+                return;
+            }
+
+            document.getElementById('studentNameDisplay').textContent = studentData.name;
+            
+            // Check if module is already completed
+            if (studentData.completedModules.includes(1)) {
+                const completeBtn = document.getElementById('completeBtn');
+                completeBtn.innerHTML = '✅ Módulo Concluído';
+                completeBtn.className = 'bg-gray-600 text-gray-300 font-bold py-4 px-8 rounded-xl cursor-not-allowed';
+                completeBtn.disabled = true;
+            }
+
+            // Simulate reading progress
+            updateReadingProgress();
+        }
+
+        function updateReadingProgress() {
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 0.5;
+                document.getElementById('readingProgress').style.width = progress + '%';
+                
+                if (progress >= 100) {
+                    clearInterval(interval);
+                }
+            }, 100);
+        }
+
+        function completeModule() {
+            if (!studentData.completedModules.includes(1)) {
+                studentData.completedModules.push(1);
+                studentData.points += 100;
+                
+                // Check for achievements
+                checkAchievements();
+                
+                localStorage.setItem('studentData', JSON.stringify(studentData));
+                
+                // Update button
+                const completeBtn = document.getElementById('completeBtn');
+                completeBtn.innerHTML = '✅ Módulo Concluído';
+                completeBtn.className = 'bg-gray-600 text-gray-300 font-bold py-4 px-8 rounded-xl cursor-not-allowed';
+                completeBtn.disabled = true;
+                
+                // Show success message
+                showSuccessMessage();
+            }
+        }
+
+        function checkAchievements() {
+            const newAchievements = [];
+            
+            if (studentData.completedModules.length === 1 && !studentData.achievements.includes('first_module')) {
+                studentData.achievements.push('first_module');
+                newAchievements.push('🎯 Primeiro Passo - Complete seu primeiro módulo');
+            }
+            
+            if (studentData.points >= 100 && !studentData.achievements.includes('points_100')) {
+                studentData.achievements.push('points_100');
+                newAchievements.push('⭐ Colecionador - Acumule 100 pontos');
+            }
+            
+            if (newAchievements.length > 0) {
+                setTimeout(() => {
+                    alert('🏆 Nova conquista desbloqueada!\n\n' + newAchievements.join('\n'));
+                }, 1000);
+            }
+        }
+
+        function showSuccessMessage() {
+            const message = document.createElement('div');
+            message.className = 'fixed top-4 right-4 bg-primary text-black px-6 py-4 rounded-lg font-bold z-50 animate-bounce';
+            message.innerHTML = '🎉 +100 pontos conquistados!';
+            document.body.appendChild(message);
+            
+            setTimeout(() => {
+                message.remove();
+            }, 3000);
+        }
+
+        function downloadPDF() {
+            alert('📄 Download do PDF: Fundamentos da Neurovenda\n\nEm um sistema real, o download seria iniciado automaticamente.');
+        }
+
+        // Initialize module when page loads
+        document.addEventListener('DOMContentLoaded', initializeModule);
+
+        // Track scroll progress for reading
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            const maxScroll = document.body.scrollHeight - window.innerHeight;
+            const progress = (scrolled / maxScroll) * 100;
+            document.getElementById('readingProgress').style.width = Math.min(progress, 100) + '%';
+        });
+    </script>
+</body>
+</html>

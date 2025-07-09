@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Aluno - MÉTODO VAP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0AFF0F',
+                        dark: '#272525'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white min-h-screen">
+    <!-- Header -->
+    <header class="bg-gray-900 border-b border-gray-700 sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-r from-primary to-green-500 rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-black text-primary font-poppins">MÉTODO VAP</span>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <div class="text-right">
+                        <div class="text-white font-bold" id="studentNameDisplay">Carregando...</div>
+                        <div class="text-gray-400 text-sm">Aluno</div>
+                    </div>
+                    <button onclick="logout()" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Welcome Section -->
+        <div class="mb-8">
+            <h1 class="text-3xl md:text-5xl font-black text-white mb-4 font-poppins">
+                Bem-vindo ao <span class="text-primary">MÉTODO VAP</span>
+            </h1>
+            <p class="text-xl text-gray-300 font-inter">
+                Continue sua jornada de transformação. Cada módulo concluído te aproxima do sucesso!
+            </p>
+        </div>
+
+        <!-- Progress Overview -->
+        <div class="grid md:grid-cols-4 gap-6 mb-12">
+            <div class="bg-gray-900 rounded-2xl p-6 border border-gray-700">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="text-2xl font-black text-primary mb-1" id="completedModules">0</div>
+                <div class="text-gray-400 text-sm">Módulos Concluídos</div>
+            </div>
+
+            <div class="bg-gray-900 rounded-2xl p-6 border border-gray-700">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="text-2xl font-black text-yellow-500 mb-1" id="totalPoints">0</div>
+                <div class="text-gray-400 text-sm">Pontos Conquistados</div>
+            </div>
+
+            <div class="bg-gray-900 rounded-2xl p-6 border border-gray-700">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="text-2xl font-black text-blue-500 mb-1" id="studyDays">0</div>
+                <div class="text-gray-400 text-sm">Dias de Estudo</div>
+            </div>
+
+            <div class="bg-gray-900 rounded-2xl p-6 border border-gray-700">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="text-2xl font-black text-purple-500 mb-1" id="progressPercentage">0%</div>
+                <div class="text-gray-400 text-sm">Progresso Total</div>
+            </div>
+        </div>
+
+        <!-- Overall Progress Bar -->
+        <div class="bg-gray-900 rounded-2xl p-6 border border-gray-700 mb-12">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-xl font-bold text-white font-poppins">Progresso Geral do Curso</h3>
+                <span class="text-primary font-bold" id="progressText">0/8 módulos</span>
+            </div>
+            <div class="bg-gray-700 rounded-full h-4 mb-4">
+                <div class="bg-gradient-to-r from-primary to-green-500 rounded-full h-4 transition-all duration-500" id="progressBar" style="width: 0%"></div>
+            </div>
+            <p class="text-gray-400 text-sm font-inter">Continue estudando para desbloquear conquistas especiais!</p>
+        </div>
+
+        <!-- Achievements -->
+        <div class="bg-gray-900 rounded-2xl p-6 border border-gray-700 mb-12">
+            <h3 class="text-xl font-bold text-white mb-6 font-poppins">🏆 Suas Conquistas</h3>
+            <div class="grid md:grid-cols-4 gap-4" id="achievementsContainer">
+                <!-- Achievements will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Course Modules -->
+        <div class="space-y-6">
+            <h2 class="text-2xl font-black text-white font-poppins">📚 Módulos do Curso</h2>
+            
+            <div class="grid gap-6" id="modulesContainer">
+                <!-- Modules will be populated by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const modules = [
+            {
+                id: 1,
+                title: "Fundamentos da Neurovenda",
+                description: "Decodifique a mente do cliente. Aprenda como o cérebro toma decisões de compra e como influenciar esse processo.",
+                duration: "4h 30min",
+                lessons: 12,
+                points: 100
+            },
+            {
+                id: 2,
+                title: "Copywriting que Converte",
+                description: "Palavras que vendem. Domine a arte da escrita persuasiva que transforma visitantes em compradores.",
+                duration: "5h 15min",
+                lessons: 15,
+                points: 150
+            },
+            {
+                id: 3,
+                title: "Prospecção Inteligente",
+                description: "Encontre clientes qualificados usando estratégias modernas e automação inteligente.",
+                duration: "3h 45min",
+                lessons: 10,
+                points: 100
+            },
+            {
+                id: 4,
+                title: "Liderança em Vendas",
+                description: "Desenvolva presença e autoridade para liderar equipes de alta performance e multiplicar resultados.",
+                duration: "6h 20min",
+                lessons: 18,
+                points: 200
+            },
+            {
+                id: 5,
+                title: "Gatilhos Mentais Avançados",
+                description: "Psicologia aplicada às vendas. Acelere decisões de compra usando gatilhos poderosos.",
+                duration: "4h 10min",
+                lessons: 13,
+                points: 150
+            },
+            {
+                id: 6,
+                title: "IA nas Vendas",
+                description: "Use inteligência artificial para otimizar processos, automatizar follow-ups e aumentar resultados.",
+                duration: "5h 30min",
+                lessons: 16,
+                points: 200
+            },
+            {
+                id: 7,
+                title: "Negociação Estratégica",
+                description: "Técnicas avançadas para fechar negócios com margem superior e vencer objeções.",
+                duration: "4h 45min",
+                lessons: 14,
+                points: 150
+            },
+            {
+                id: 8,
+                title: "Autoridade e Posicionamento",
+                description: "Posicione-se como especialista e referência no seu mercado. Clientes vêm até você.",
+                duration: "3h 20min",
+                lessons: 9,
+                points: 100
+            }
+        ];
+
+        const achievements = [
+            { id: 'first_module', name: 'Primeiro Passo', description: 'Complete seu primeiro módulo', icon: '🎯', requirement: 1 },
+            { id: 'quarter_complete', name: 'Progresso Sólido', description: 'Complete 25% do curso', icon: '📈', requirement: 2 },
+            { id: 'half_complete', name: 'Meio Caminho', description: 'Complete 50% do curso', icon: '🔥', requirement: 4 },
+            { id: 'almost_there', name: 'Quase Lá', description: 'Complete 75% do curso', icon: '⚡', requirement: 6 },
+            { id: 'master', name: 'Mestre em Vendas', description: 'Complete todos os módulos', icon: '👑', requirement: 8 },
+            { id: 'points_500', name: 'Colecionador', description: 'Acumule 500 pontos', icon: '💎', requirement: 500 },
+            { id: 'streak_7', name: 'Dedicado', description: 'Estude por 7 dias seguidos', icon: '🔥', requirement: 7 }
+        ];
+
+        let studentData = JSON.parse(localStorage.getItem('studentData')) || {
+            name: 'Visitante',
+            email: '',
+            enrollmentDate: new Date().toISOString(),
+            completedModules: [],
+            points: 0,
+            achievements: []
+        };
+
+        function initializePortal() {
+            // Check if student is logged in
+            if (!studentData.name || studentData.name === 'Visitante') {
+                window.location.href = '../';
+                return;
+            }
+
+            updateStudentDisplay();
+            renderModules();
+            renderAchievements();
+            updateProgress();
+        }
+
+        function updateStudentDisplay() {
+            document.getElementById('studentNameDisplay').textContent = studentData.name;
+            document.getElementById('completedModules').textContent = studentData.completedModules.length;
+            document.getElementById('totalPoints').textContent = studentData.points;
+            
+            const enrollmentDate = new Date(studentData.enrollmentDate);
+            const today = new Date();
+            const studyDays = Math.floor((today - enrollmentDate) / (1000 * 60 * 60 * 24)) + 1;
+            document.getElementById('studyDays').textContent = studyDays;
+            
+            const progressPercentage = Math.round((studentData.completedModules.length / modules.length) * 100);
+            document.getElementById('progressPercentage').textContent = progressPercentage + '%';
+            document.getElementById('progressText').textContent = `${studentData.completedModules.length}/${modules.length} módulos`;
+            document.getElementById('progressBar').style.width = progressPercentage + '%';
+        }
+
+        function renderModules() {
+            const container = document.getElementById('modulesContainer');
+            container.innerHTML = '';
+
+            modules.forEach((module, index) => {
+                const isCompleted = studentData.completedModules.includes(module.id);
+                const isLocked = index > 0 && !studentData.completedModules.includes(modules[index - 1].id);
+                
+                const moduleCard = document.createElement('div');
+                moduleCard.className = `bg-gray-900 rounded-2xl p-6 border transition-all duration-300 ${
+                    isCompleted ? 'border-primary bg-primary/5' : 
+                    isLocked ? 'border-gray-700 opacity-50' : 
+                    'border-gray-700 hover:border-primary/50'
+                }`;
+
+                moduleCard.innerHTML = `
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 rounded-xl flex items-center justify-center ${
+                                isCompleted ? 'bg-primary text-black' : 
+                                isLocked ? 'bg-gray-700 text-gray-500' : 
+                                'bg-gray-800 text-primary'
+                            }">
+                                <span class="font-black text-xl">${String(module.id).padStart(2, '0')}</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-xl mb-2 font-poppins ${isCompleted ? 'text-primary' : 'text-white'}">${module.title}</h3>
+                                <p class="text-gray-300 text-sm mb-3 font-inter">${module.description}</p>
+                                <div class="flex items-center space-x-4 text-xs text-gray-400">
+                                    <span>⏱️ ${module.duration}</span>
+                                    <span>📖 ${module.lessons} aulas</span>
+                                    <span>⭐ ${module.points} pontos</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col space-y-2">
+                            ${isCompleted ? 
+                                '<div class="bg-primary text-black px-4 py-2 rounded-full text-sm font-bold">✅ Concluído</div>' :
+                                isLocked ? 
+                                '<div class="bg-gray-700 text-gray-400 px-4 py-2 rounded-full text-sm font-bold">🔒 Bloqueado</div>' :
+                                `<button onclick="startModule(${module.id})" class="bg-primary hover:bg-green-500 text-black px-6 py-2 rounded-full text-sm font-bold transition-colors">▶️ Iniciar</button>`
+                            }
+                            <button onclick="downloadPDF(${module.id})" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-full text-sm font-bold transition-colors">
+                                📄 PDF
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                container.appendChild(moduleCard);
+            });
+        }
+
+        function renderAchievements() {
+            const container = document.getElementById('achievementsContainer');
+            container.innerHTML = '';
+
+            achievements.forEach(achievement => {
+                const isUnlocked = checkAchievement(achievement);
+                
+                const achievementCard = document.createElement('div');
+                achievementCard.className = `text-center p-4 rounded-xl border transition-all duration-300 ${
+                    isUnlocked ? 'border-primary bg-primary/10' : 'border-gray-700 bg-gray-800/50 opacity-50'
+                }`;
+
+                achievementCard.innerHTML = `
+                    <div class="text-3xl mb-2">${achievement.icon}</div>
+                    <div class="font-bold text-sm mb-1 ${isUnlocked ? 'text-primary' : 'text-gray-400'}">${achievement.name}</div>
+                    <div class="text-xs text-gray-400">${achievement.description}</div>
+                `;
+
+                container.appendChild(achievementCard);
+            });
+        }
+
+        function checkAchievement(achievement) {
+            if (achievement.id === 'first_module') return studentData.completedModules.length >= 1;
+            if (achievement.id === 'quarter_complete') return studentData.completedModules.length >= 2;
+            if (achievement.id === 'half_complete') return studentData.completedModules.length >= 4;
+            if (achievement.id === 'almost_there') return studentData.completedModules.length >= 6;
+            if (achievement.id === 'master') return studentData.completedModules.length >= 8;
+            if (achievement.id === 'points_500') return studentData.points >= 500;
+            if (achievement.id === 'streak_7') return true; // Simplified for demo
+            return false;
+        }
+
+        function startModule(moduleId) {
+            window.location.href = `modulo-${moduleId}.html`;
+        }
+
+        function downloadPDF(moduleId) {
+            const module = modules.find(m => m.id === moduleId);
+            alert(`📄 Download do PDF: ${module.title}\n\nEm um sistema real, o download seria iniciado automaticamente.`);
+        }
+
+        function updateProgress() {
+            // This would typically sync with a backend
+            localStorage.setItem('studentData', JSON.stringify(studentData));
+        }
+
+        function logout() {
+            if (confirm('Tem certeza que deseja sair?')) {
+                localStorage.removeItem('studentData');
+                window.location.href = '../';
+            }
+        }
+
+        // Initialize portal when page loads
+        document.addEventListener('DOMContentLoaded', initializePortal);
+    </script>
+</body>
+</html>
